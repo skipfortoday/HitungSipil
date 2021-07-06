@@ -6,12 +6,12 @@ const theme = createMuiTheme({
   // See more here: https://material-ui.com/customization/themes/
   palette: {
     type: "light",
-    // primary: {
-    //   main: yellow[700],
-    // },
-    // secondary: {
-    //   main: grey[700],
-    // },
+    primary: {
+      main: yellow[700],
+    },
+    secondary: {
+      main: grey[700],
+    },
   },
 });
 

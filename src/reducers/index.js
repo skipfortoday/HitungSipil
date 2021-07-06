@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import increment from "./increment/index";
+import covid from "./covidReducer";
 
 export default combineReducers({
-  increment,
+  covid,
 });

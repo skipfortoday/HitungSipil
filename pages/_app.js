@@ -38,7 +38,7 @@ class _App extends App {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <title>NextJS - Proyek Starter</title>
+          <title>NextJS - With Redux and Material UI</title>
         </Head>
         <CssBaseline />
         <Layout>

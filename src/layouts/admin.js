@@ -16,11 +16,14 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+import BackButton from "../components/backbutton";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import LanguageIcon from "@material-ui/icons/Language";
+import PublicIcon from "@material-ui/icons/Public";
+import VpnLockIcon from "@material-ui/icons/VpnLock";
 
 const drawerWidth = 240;
 
@@ -96,8 +99,6 @@ export default function MiniDrawer({ children }) {
   const [open, setOpen] = React.useState(false);
   const [openMaster, setOpenMaster] = React.useState(true);
 
-  console.log(children);
-
   const handleClickMaster = () => {
     setOpenMaster(!openMaster);
   };
@@ -131,6 +132,7 @@ export default function MiniDrawer({ children }) {
           >
             <MenuIcon />
           </IconButton>
+          <BackButton />
           <Typography variant="h6" noWrap>
             {children.type.name}
           </Typography>
@@ -168,32 +170,32 @@ export default function MiniDrawer({ children }) {
               <ListItem
                 button
                 className={classes.nested}
-                onClick={() => router.push("/menu1")}
+                onClick={() => router.push("/master/status-server")}
               >
                 <ListItemIcon>
-                  <AccountBoxIcon />
+                  <LanguageIcon />
                 </ListItemIcon>
-                <ListItemText primary="Menu1" />
+                <ListItemText primary="Global" />
               </ListItem>
               <ListItem
                 button
                 className={classes.nested}
-                onClick={() => router.push("/menu2")}
+                onClick={() => router.push("/master/master-data")}
               >
                 <ListItemIcon>
-                  <AccountBoxIcon />
+                  <PublicIcon />
                 </ListItemIcon>
-                <ListItemText primary="Menu2" />
+                <ListItemText primary="Indonesia" />
               </ListItem>
               <ListItem
                 button
                 className={classes.nested}
-                onClick={() => router.push("/menu3")}
+                onClick={() => router.push("/covid/provinsi")}
               >
                 <ListItemIcon>
-                  <AccountBoxIcon />
+                  <VpnLockIcon />
                 </ListItemIcon>
-                <ListItemText primary="Menu3" />
+                <ListItemText primary="Provinsi" />
               </ListItem>
             </List>
           </Collapse>

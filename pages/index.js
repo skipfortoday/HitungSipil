@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import Admin from "../src/layouts/admin";
-import Increment from "../src/components/increment";
+import CardStatus from "../src/components/cardStatus";
 
 const Dashboard = () => {
   return (
     <>
-      <Increment />
+      <CardStatus />
     </>
   );
 };
